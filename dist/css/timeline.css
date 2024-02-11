@@ -1,0 +1,80 @@
+
+body {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	font-size: 1.2rem;
+	margin-bottom: .5em;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: .8rem;
+} 
+
+button {
+	border: 1px solid #007bff;
+	background: #007bff;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 6px;
+}
+
+button:hover {
+	background: white;
+	color: #007bff;
+}
+
+	
+
+
+.timeline-item {
+	padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+	border-left: 2px solid #0B4C8A;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+}
+
+.timeline-item::before {
+    content: attr(date-is);
+		position: absolute;
+		left: 2em;
+		font-weight: bold;
+		top: 1em;
+		display: block;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 700;
+		font-size: .785rem;
+}
+
+.timeline-item::after {
+    width: 10px;
+		height: 10px;
+		display: block;
+		top: 1em;
+		position: absolute;
+		left: -7px;
+		border-radius: 10px;
+		content: '';
+		border: 2px solid #0B4C8A;
+		background: white;
+}
+
+.timeline-item:last-child {
+    border-image: linear-gradient(
+			to bottom,
+			#0B4C8A 60%,
+			rgba(#0B4C8A, 0)) 1 100%
+		;
+}
